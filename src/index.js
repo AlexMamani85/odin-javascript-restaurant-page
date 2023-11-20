@@ -1,24 +1,25 @@
+import hola from './pages/home';
 console.log("src/index.js");
 
-contentDiv= document.getElementById("content");
-containerDiv = document.createElement("div");
-title= document.createElement("h1");
-navbar=document.createElement("div");
-navbar_item1=document.createElement("a");
-navbar_item2=document.createElement("a");
-navbar_item3=document.createElement("a");
+let contentDiv= document.getElementById("content");
+let containerDiv = document.createElement("div");
+let title= document.createElement("h1");
+let navbar=document.createElement("div");
+let navbar_item1=document.createElement("a");
+let navbar_item2=document.createElement("a");
+let navbar_item3=document.createElement("a");
 
-body=document.createElement("div");
-bodyTitle=document.createElement("div");
-bodyBody=document.createElement("div");
+let body=document.createElement("div");
+let bodyTitle=document.createElement("div");
+let bodyBody=document.createElement("div");
 
-cardContainer=document.createElement("div");
+let cardContainer=document.createElement("div");
 
-bodyFooterAddress=document.createElement("div");
-bodyFooterPhone=document.createElement("div");
-bodyFooterCiudad=document.createElement("div");
+let bodyFooterAddress=document.createElement("div");
+let bodyFooterPhone=document.createElement("div");
+let bodyFooterCiudad=document.createElement("div");
 
-bodyFooter=document.createElement("div");
+let bodyFooter=document.createElement("div");
 
 
 title.innerHTML = 'Restaurant "Hispanoamericano"';
@@ -62,7 +63,7 @@ navbar.style=`
     justify-content: space-evenly;
     padding: 50px;
 `
-navbar_itemStyle=`
+let navbar_itemStyle=`
     font-size: 1.5rem;
     list-style: none;
     display: inline-block;
@@ -123,7 +124,7 @@ bodyFooter.appendChild(bodyFooterAddress);
 bodyFooter.appendChild(bodyFooterPhone);
 bodyFooter.appendChild(bodyFooterCiudad);
 
-Cards=[
+let Cards=[
     {
         title:'Domingo: Adobo arequipeño',
         body:`El adobo arequipeño es un plato bandera de la gastronomía
@@ -189,11 +190,11 @@ Cards=[
     ];
 
 Cards.forEach(item => {
-    card=document.createElement("div");
-    cardTitle= document.createElement("div");
-    cardBody= document.createElement("div");
-    img= document.createElement("img");
-    cardFooter= document.createElement("div");
+    let card=document.createElement("div");
+    let cardTitle= document.createElement("div");
+    let cardBody= document.createElement("div");
+    let img= document.createElement("img");
+    let cardFooter= document.createElement("div");
 
     cardTitle.innerHTML=item.title;
     cardBody.innerHTML=item.body;
@@ -236,8 +237,7 @@ Cards.forEach(item => {
     card.appendChild(cardTitle);
     card.appendChild(cardBody);
     card.appendChild(cardFooter);
-    console.log(card.innerHTML)
-    console.log("")
+
     
     cardContainer.appendChild(card);
 });
@@ -248,4 +248,6 @@ body.appendChild(bodyBody);
 body.appendChild(bodyFooter);
     
 contentDiv.appendChild(body);
+
+contentDiv.appendChild(hola);
 
