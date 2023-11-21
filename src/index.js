@@ -53,24 +53,20 @@ navbar.appendChild(navbar_item1);
 navbar.appendChild(navbar_item2);
 navbar.appendChild(navbar_item3);
 
-//containerDiv.appendChild(containerDiv);
 containerDiv.appendChild(title);
 containerDiv.appendChild(navbar);
 
 mainElement.innerHTML="";
 
 navbar_item1.addEventListener("click",()=>{
-    console.log("navbar_item1");
     mainElement.innerHTML="";
     mainElement.appendChild(homeComponent);
     });
 navbar_item2.addEventListener("click",()=>{
-    console.log("navbar_item2");
     mainElement.innerHTML="";
     mainElement.appendChild(menuComponent);
     });
 navbar_item3.addEventListener("click",()=>{
-    console.log("navbar_item3");
     mainElement.innerHTML="";
     mainElement.appendChild(contactComponent);
     });
